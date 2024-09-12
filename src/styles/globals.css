@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/FuturaCyrillicMedium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Futura PT Medium';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.container {
+  max-width: 1760px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Example CSS for aligning sliders */
+.slick-slide img {
+  border: 2px solid transparent;
+}
+
+.slick-slide.slick-center img {
+  border: 2px solid #000;
+}
+
+.slick-slide img {
+  opacity: 0.5;
+}
+
+.slick-slide.slick-active img {
+  opacity: 1;
+}
